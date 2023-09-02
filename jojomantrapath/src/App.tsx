@@ -3,6 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import mainLogo from "./media/jojomantrapath.png";
 import mainAudio from "./media/Only-One-Bar-in-Interstellar-Space.mp3";
+import Accordion from "react-bootstrap/Accordion";
 
 function App() {
   return (
@@ -26,89 +27,61 @@ function App() {
       </div>
 
       <div className="content-container d-flex flex-column w-100 px-3">
-        <div className="intro-container d-flex justify-content-center">
+        <div className="intro-container d-flex justify-content-center pb-3">
           <h2 className="text-white font-size-18px shadow mb-0">
             Jordan Neumann-Burns
           </h2>
         </div>
 
-        <div className="intro-container" id="accordion">
-          <div className="about-card card">
-            <div className="card-header" id="headingOne">
-              <h5 className="mb-0">
-                <button
-                  className="btn btn-link text-white font-size-18px shadow"
-                  data-toggle="collapse"
-                  data-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
-                >
-                  <span className="">About</span>
-                </button>
-              </h5>
-            </div>
-          </div>
-          <div className="experience-card card">
-            <div className="card-header" id="headingTwo">
-              <h5 className="mb-0">
-                <button
-                  className="btn btn-link text-white font-size-18px shadow"
-                  data-toggle="collapse"
-                  data-target="#collapseTwo"
-                  aria-expanded="true"
-                  aria-controls="collapseTwo"
-                >
-                  <span className="">Experience</span>
-                </button>
-              </h5>
-            </div>
-          </div>
-          <div className="education-card card">
-            <div className="card-header" id="headingThree">
-              <h5 className="mb-0">
-                <button
-                  className="btn btn-link text-white font-size-18px shadow"
-                  data-toggle="collapse"
-                  data-target="#collapseThree"
-                  aria-expanded="true"
-                  aria-controls="collapseThree"
-                >
-                  <span className="">Education</span>
-                </button>
-              </h5>
-            </div>
-          </div>
-          <div className="skills-card card">
-            <div className="card-header" id="headingFour">
-              <h5 className="mb-0">
-                <button
-                  className="btn btn-link text-white font-size-18px shadow"
-                  data-toggle="collapse"
-                  data-target="#collapseFour"
-                  aria-expanded="true"
-                  aria-controls="collapseFour"
-                >
-                  <span className="">Skills</span>
-                </button>
-              </h5>
-            </div>
-          </div>
-          <div className="interests-card card">
-            <div className="card-header" id="headingFive">
-              <h5 className="mb-0">
-                <button
-                  className="btn btn-link text-white font-size-18px shadow"
-                  data-toggle="collapse"
-                  data-target="#collapseFive"
-                  aria-expanded="true"
-                  aria-controls="collapseFive"
-                >
-                  <span className="">Interests</span>
-                </button>
-              </h5>
-            </div>
-          </div>
-        </div>
+        <Accordion>
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>About</Accordion.Header>
+            <Accordion.Body>
+              <p>
+                Hi, I'm Jordan. I'm a full stack senior Web Developer
+                specializing in NodeJS, React, NextJS, Docker and Mongo. I also
+                specialize in producing fully functional web apps to design in
+                HTML, CSS, JavaScript, JQuery, and Bootstrap within Content
+                Management Systems.
+              </p>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Skills</Accordion.Header>
+            <Accordion.Body>
+              <ul>
+                <li>NodeJS</li>
+                <li>React</li>
+                <li>NextJS</li>
+                <li>Docker</li>
+                <li>Mongo</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>JQuery</li>
+                <li>Bootstrap</li>
+              </ul>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="2">
+            <Accordion.Header>Experience</Accordion.Header>
+            <Accordion.Body>
+              <p></p>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="3">
+            <Accordion.Header>Education</Accordion.Header>
+            <Accordion.Body>
+              <p></p>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="4">
+            <Accordion.Header>Interests</Accordion.Header>
+            <Accordion.Body>
+              <p></p>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
       </div>
     </div>
   );
